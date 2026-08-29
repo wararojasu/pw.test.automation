@@ -13,7 +13,7 @@ export class LoginPage{
         this.loginButton = page.locator('button[id="login"]');
     }
 
-    async userLogin(){
+    async userLogin(): Promise<void> {
         await this.userName.fill(process.env.APP_USERNAME);
         await this.password.fill(process.env.APP_PASSWORD);
         await this.loginButton.click();

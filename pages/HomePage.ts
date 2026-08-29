@@ -11,15 +11,15 @@ export class HomePage{
         this.loginButton = page.locator('button[id="login"]');
     }
 
-    async gotToApplication(){
+    async gotToApplication(): Promise<void> {
         await this.page.goto('/');
     }
 
-    async navigateToBookApplication(){
+    async navigateToBookApplication(): Promise<void> {
         await this.bookApplication.click();
     }
 
-    async goToLogin(){
+    async goToLogin(): Promise<void> {
         await this.loginButton.click();
     }
 }
